@@ -1,0 +1,404 @@
+TextWindow.Show()
+TextWindow.WriteLine("sahmi = 1 or -1")
+TextWindow.WriteLine("gooya = 2 or -2")
+TextWindow.WriteLine("radikally = 3 or -3")
+TextWindow.WriteLine("lor = 4 or -4")
+TextWindow.WriteLine("sin = 5 or -5")
+TextWindow.WriteLine("cos = 6 or -6")
+TextWindow.WriteLine("tan = 7 or -7")
+TextWindow.WriteLine("cot = 8 or -8")
+TextWindow.WriteLine("joz sahih = 9 or -9")
+TextWindow.WriteLine("ghadr = 10 or -10")
+TextWindow.WriteLine("")
+TextWindow.WriteLine("select (1-2-3-4-5-6-7-8-9-10) or -(1-2-3-4-5-6-7-8-9-10)")
+TextWindow.WriteLine("")
+start1 :
+
+ppo = TextWindow.ReadNumber()
+
+If (ppo = 1 Or ppo = -1 Or ppo = 2 Or ppo = -2 Or ppo = 3 Or ppo = -3 Or ppo = 4 Or ppo = -4 Or ppo = 5 Or ppo = -5 Or ppo = 6 Or ppo = -6 Or ppo = 7 Or ppo = -7 Or ppo = 8 Or ppo = -8 Or ppo = 9 Or ppo = -9 Or ppo = 10 Or ppo = -10) Then
+GraphicsWindow.Show()
+GraphicsWindow.CanResize = "false"
+GraphicsWindow.Height = 800
+GraphicsWindow.Width = 800
+GraphicsWindow.BackgroundColor = "dark"
+GraphicsWindow.penColor = "white"
+
+Shapes.AddLine(400,0,400,800)
+Shapes.AddLine(0,400,800,400)
+Shapes.AddLine(400,0,390,20)
+Shapes.AddLine(400,0,410,20)
+Shapes.AddLine(800,400,780,390)
+Shapes.AddLine(800,400,780,410)
+
+GraphicsWindow.penColor = "orange"
+GraphicsWindow.BrushColor = "orange"
+
+x = 0
+y = 0
+
+
+If (ppo = 1 Or ppo = -1) Then
+  Goto start2
+EndIf
+
+If (ppo = 2 Or ppo = -2) Then
+  Goto start3
+EndIf
+
+If (ppo = 3 Or ppo = -3) Then
+  Goto start4
+EndIf
+
+If (ppo = 4 Or ppo = -4) Then
+  Goto start5
+EndIf
+
+If (ppo = 5 Or ppo = -5) Then
+  Goto start6
+EndIf
+
+If (ppo = 6 Or ppo = -6) Then
+  Goto start7
+EndIf
+
+If (ppo = 7 Or ppo = -7) Then
+  Goto start8
+EndIf
+
+If (ppo = 8 Or ppo = -8) Then
+  Goto start9
+EndIf
+
+If (ppo = 9 Or ppo = -9) Then
+  Goto start10
+EndIf
+
+If (ppo = 10 Or ppo = -10) Then
+  Goto start11
+EndIf
+
+EndIf
+
+If (ppo < 9999999999999999999999 Or ppo > 9999999999999999999999) Then
+  TextWindow.WriteLine("please select (1-2-3-4-5-6-7-8-9-10) or -(1-2-3-4-5-6-7-8-9-10)")
+  Goto start1
+  EndIf
+
+
+start2 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.5
+a = x1
+y1 = -(1/100)*a*a
+x = x1
+x2 = -x1
+
+If (ppo = -1) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,x1+397.5,y1+395)
+Shapes.Move(ball2,x2+397.5,y1+395)
+
+yeeet3:
+
+Program.Delay(10)
+
+If (y1+395<0) Then
+  Goto yeeet3
+EndIf
+
+Goto start2
+
+start3 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.01
+a = x1
+y1 = -1/a
+x = x1
+x2 = -x1
+b = x2
+y2 = -1/b
+
+If (ppo = -2) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,(100*x1)+397.5,(100*y1)+395)
+Shapes.Move(ball2,(100*x2)+397.5,(100*y2)+395)
+
+
+yeet:
+
+Program.Delay(10)
+
+If (y1+395<0) Or ((100*x1)+400>800) Then
+  Goto yeet
+EndIf
+
+Goto start3
+
+
+start4 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.5
+a = x1
+a1 = Math.SquareRoot(a)
+y1 = -5*a1
+x = x1
+x2 = -x1
+
+If (ppo = -3) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,x1+397.5,y1+400)
+Shapes.Move(ball2,x2+397.5,y1+400)
+
+
+yeeet:
+
+Program.Delay(10)
+
+If (x2+396<0) And (x1+400>800)Then
+  Goto yeeet
+EndIf
+Goto start4
+
+
+start5 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.1
+a = x1
+y1 = -(1/5000*(a*a*a))
+x = x1
+x2 = -x1
+b = x2
+y2 = (1/5000*(a*a*a))
+
+If (ppo = -4) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,x1+397.5,y1+395)
+Shapes.Move(ball2,x2+397.5,y2+395)
+
+
+yeet2:
+
+'Program.Delay(10)
+
+If (y1+395<0) And (y2+395>800)Then
+  Goto yeet2
+EndIf
+
+Goto start5
+
+start6 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.01
+a = x1
+y1 = -2*Math.Sin(a)
+x = x1
+x2 = -x1
+b = x2
+y2 = -2*Math.Sin(b)
+
+If (ppo = -5) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,(50*x1)+397.5,(50*y1)+395)
+Shapes.Move(ball2,(50*x2)+397.5,(50*y2)+395)
+
+
+yeet3:
+
+Program.Delay(10)
+
+If ((50*x2)+397.5<0) And ((50*x1)+397.5>800)Then
+  Goto yeet3
+EndIf
+
+Goto start6
+
+start7 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.01
+a = x1
+y1 = -2*Math.Cos(a)
+x = x1
+x2 = -x1
+b = x2
+y2 = -2*Math.Cos(b)
+
+If (ppo = -6) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,(50*x1)+397.5,(50*y1)+395)
+Shapes.Move(ball2,(50*x2)+397.5,(50*y2)+395)
+
+
+yeet4:
+
+Program.Delay(10)
+
+If ((50*x2)+397.5<0) And ((50*x1)+397.5>800)Then
+  Goto yeet4
+EndIf
+
+Goto start7
+
+start8 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.005
+a = x1
+y1 = -Math.Tan(a)
+x = x1
+x2 = -x1
+b = x2
+y2 = -Math.Tan(b)
+
+If (ppo = -7) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,(50*x1)+397.5,(50*y1)+395)
+Shapes.Move(ball2,(50*x2)+397.5,(50*y2)+395)
+
+
+yeet5:
+
+Program.Delay(10)
+
+If ((50*x2)+397.5<0) And ((50*x1)+397.5>800)Then
+  Goto yeet5
+EndIf
+
+Goto start8
+
+start9 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.005
+a = Math.Tan(x1)
+y1 = -1/a
+x = x1
+x2 = -x1
+b = Math.Tan(x2)
+y2 = -1/b
+
+If (ppo = -8) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,(50*x1)+397.5,(50*y1)+395)
+Shapes.Move(ball2,(50*x2)+397.5,(50*y2)+395)
+
+
+yeet6:
+
+Program.Delay(10)
+
+If ((50*x2)+397.5<0) And ((50*x1)+397.5>800)Then
+  Goto yeet6
+EndIf
+
+Goto start9
+
+start10 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.01
+a = x1
+y1 = -Math.Round(a)
+x = x1
+x2 = -x1
+b = x2
+y2 = -Math.Round(b)
+
+If (ppo = -9) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,(80*x1)+397.5,(80*y1)+395)
+Shapes.Move(ball2,(80*x2)+397.5,(80*y2)+395)
+
+
+yeeet2:
+
+Program.Delay(10)
+
+If (y1+395<0) And (y2+395>800)Then
+  Goto yeeet2
+EndIf
+
+Goto start10
+
+start11 :
+
+ball1 = Shapes.AddEllipse(5,5)
+ball2 = Shapes.AddEllipse(5,5)
+
+x1 = x + 0.01
+a = x1
+y1 = -Math.Abs(a)
+x = x1
+x2 = -x1
+b = x2
+y2 = -Math.Abs(b)
+
+If (ppo = -10) Then
+y2=-y2
+y1=-y1
+EndIf
+
+Shapes.Move(ball1,(50*x1)+397.5,(50*y1)+395)
+Shapes.Move(ball2,(50*x2)+397.5,(50*y2)+395)
+
+
+yeeet4:
+
+Program.Delay(10)
+
+If ((50*x2)+397.5<0) And ((50*x1)+397.5>800)Then
+  Goto yeeet4
+EndIf
+
+Goto start11
